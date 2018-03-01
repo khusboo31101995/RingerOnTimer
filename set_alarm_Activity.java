@@ -21,7 +21,7 @@ public class set_alarm_Activity extends BroadcastReceiver {
         AudioManager audioManager =(AudioManager) context.getSystemService(AUDIO_SERVICE);
         int mode=audioManager.getRingerMode();
         //issue only works for vibrate mode does not work for silent mode
-        if(mode==1)
+        if(mode==1||mode==0)
         {
             audioManager.setRingerMode(2);
         }
